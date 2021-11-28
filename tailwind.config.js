@@ -8,6 +8,20 @@ module.exports = {
   plugins: [],
   theme: {
     extend: {
+      minHeight: {
+        0: "0",
+        "1/4": "25%",
+        "1/2": "50%",
+        "3/4": "75%",
+        full: "100%",
+        "v-8": "8vh",
+        "v-70": "70vh",
+        "v-92": "92vh",
+      },
+      backgroundImage: {
+        project:
+          "url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')",
+      },
       keyframes: {
         "fade-in-down": {
           "0%": {
@@ -52,9 +66,10 @@ module.exports = {
       backgroundOpacity: ["active"],
       textColor: ["active"],
       borderWidth: ["hover", "active"],
-      borderOpacity: ["active"],
+      borderOpacity: ["active", "hover"],
       ringWidth: ["active"],
       boxShadow: ["hover", "active"],
+      opacity: ["disabled"],
     },
   },
   purge: {

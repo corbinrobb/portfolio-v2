@@ -1,11 +1,13 @@
 <script lang="ts">
   export let clickHandler: () => void;
   export let value: string;
+  export let disabled: boolean;
 </script>
 
 <button
   on:click={clickHandler}
-  class="justify-self-end p-3 border cursor-pointer select-none rounded bg-gray-50 dark:bg-gray-500 dark:border-gray-800 dark:text-gray-50"
+  class="justify-self-end p-3 cursor-pointer select-none rounded bg-gray-50 dark:bg-gray-500 disabled:opacity-50 active:text-indigo-400 active:bg-gray-100 shadow"
+  {disabled}
 >
   {value}
 </button>

@@ -1,7 +1,10 @@
 <script lang="ts">
   import Nav from "./Nav.svelte";
+  export let fixed: boolean;
 </script>
 
 <header>
-  <Nav />
+  {#key fixed}
+    <Nav {fixed} />
+  {/key}
 </header>
