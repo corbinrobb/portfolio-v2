@@ -1,19 +1,33 @@
 <script lang="ts">
   import Main from "./components/Main.svelte";
   import Header from "./components/Header.svelte";
-  import Footer from "./components/Footer.svelte";
-  let dark: boolean;
   import { darkModeStore } from "./stores";
+
+  let dark: boolean;
+  let y = 0;
+  let lastY = 0;
+  let fixed = false;
+
   darkModeStore.subscribe((state) => {
     dark = state;
   });
+
+  const updateY = (y: number) => {
+    if (Math.abs(y - lastY) < 64) return;
+    if (y >= lastY && fixed !== false) fixed = false;
+    if (y < lastY && fixed !== true) fixed = true;
+    lastY = y;
+  };
+
+  $: updateY(y);
 </script>
+
+<svelte:window bind:scrollY={y} />
 
 <div class:dark>
   <div class="dark:bg-gray-700 dark:text-gray-50">
-    <Header />
+    <Header {fixed} />
     <Main />
-    <Footer />
   </div>
 </div>
 
