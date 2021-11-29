@@ -13,28 +13,30 @@
   >
     <div class="flex justify-center w-1/2 lg:w-1/2">
       <img
-        class="border shadow max-h-64 rounded-full object-contain"
+        class="border-2 dark:border-gray-600 shadow max-h-64 rounded-full object-contain"
         src="/images/Portrait.jpeg"
         alt="Corbin Robb Portrait"
       />
     </div>
     <div class="flex w-full lg:w-2/5 justify-around items-center">
-      <LinkIcon>
+      <LinkIcon href="https://github.com/corbinrobb">
         <GithubIcon classes="h-8 w-8 cursor-pointer" />
       </LinkIcon>
-      <LinkIcon>
+      <LinkIcon href="https://www.linkedin.com/in/corbinrobb/">
         <LinkedInIcon classes="h-8 w-8 cursor-pointer" />
       </LinkIcon>
-      <LinkIcon>
+      <LinkIcon href="mailto:corbinrobb@gmail.com">
         <GmailIcon classes="h-8 w-8 cursor-pointer" />
       </LinkIcon>
-      <LinkIcon>
+      <LinkIcon href="/images/resume.pdf">
         <DocumentIcon classes="h-8 w-8 cursor-pointer" />
       </LinkIcon>
     </div>
   </div>
 
-  <div class="shadow-md rounded px-2 py-4 space-y-3 max-w-screen-md mx-auto">
+  <div
+    class="shadow-md border dark:border-gray-600 rounded px-2 py-4 lg:px-5 lg:py-8 space-y-3 max-w-screen-md mx-auto"
+  >
     <h2 class="text-2xl p-2">About Me:</h2>
     <p class="px-2">
       &emsp;Resourceful Full Stack Developer that wields passion and ingenuity

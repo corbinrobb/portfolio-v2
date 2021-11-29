@@ -4,7 +4,6 @@
   import Button from "./Button.svelte";
   import Project from "./Project.svelte";
   import Page from "./Page.svelte";
-  import Modal from "./Modal.svelte";
 
   let current = 0;
   let showDetails = false;
@@ -34,9 +33,9 @@
 </script>
 
 <Page>
-  <div class=" max-w-none flex">
+  <div class="max-w-none flex space-x-3 overflow-hidden">
     {#key current}
-      <Project {forward} {...projects[current]} />
+      <Project {forward} {...project} {showDetails} {toggleDetails} />
     {/key}
   </div>
   <div class="w-full px-4 py-3 flex absolute bottom-0 left-0">
@@ -44,7 +43,10 @@
       <Button disabled={current === 0} clickHandler={prev} value="prev" />
     </div>
     <div class="w-1/3 flex justify-center items-center">
-      <Button clickHandler={toggleDetails} value="Details" />
+      <Button
+        clickHandler={toggleDetails}
+        value={!showDetails ? "Details" : "Close"}
+      />
     </div>
     <div class="w-1/3 flex justify-end">
       <Button
@@ -55,10 +57,3 @@
     </div>
   </div>
 </Page>
-
-<Modal display={showDetails} toggleDisplay={toggleDetails}>
-  <div class="p-6">
-    <div class="h-6"><h4>{project.title}</h4></div>
-    <div><p>{project.description}</p></div>
-  </div>
-</Modal>

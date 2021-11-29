@@ -2,7 +2,6 @@
   import Main from "./components/Main.svelte";
   import Header from "./components/Header.svelte";
   import { darkModeStore } from "./stores";
-  import { beforeUpdate, onDestroy, afterUpdate, onMount, tick } from "svelte";
 
   let dark: boolean;
   let y = 0;

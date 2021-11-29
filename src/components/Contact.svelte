@@ -9,17 +9,17 @@
 
 <Page>
   <div class="h-full py-20 lg:shadow-md flex justify-around items-center">
-    <LinkIcon>
-      <GithubIcon />
+    <LinkIcon href="https://github.com/corbinrobb">
+      <GithubIcon classes="h-8 w-8 cursor-pointer" />
     </LinkIcon>
-    <LinkIcon>
-      <LinkedInIcon />
+    <LinkIcon href="https://www.linkedin.com/in/corbinrobb/">
+      <LinkedInIcon classes="h-8 w-8 cursor-pointer" />
     </LinkIcon>
-    <LinkIcon>
-      <GmailIcon />
+    <LinkIcon href="mailto:corbinrobb@gmail.com">
+      <GmailIcon classes="h-8 w-8 cursor-pointer" />
     </LinkIcon>
-    <LinkIcon>
-      <DocumentIcon />
+    <LinkIcon href="/images/resume.pdf">
+      <DocumentIcon classes="h-8 w-8 cursor-pointer" />
     </LinkIcon>
   </div>
 </Page>

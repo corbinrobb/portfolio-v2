@@ -1,7 +1,8 @@
 <script lang="ts">
   import { onDestroy } from "svelte";
+  import { quintOut } from "svelte/easing";
 
-  import { fly } from "svelte/transition";
+  import { fly, scale } from "svelte/transition";
 
   import CodeIcon from "../icons/CodeIcon.svelte";
   import MenuIcon from "../icons/MenuIcon.svelte";
@@ -32,12 +33,6 @@
     menuExpandedStore.set(false);
   };
 
-  const toggleActive = (currentPage, item) => {
-    return currentPage !== item.toLowerCase()
-      ? "border-opacity-0 hover:border-opacity-75"
-      : "";
-  };
-
   $: setFixed = fixed ? "fixed" : "absolute";
 </script>
 
@@ -66,12 +61,15 @@
         <li
           on:click={changePage}
           name={item.toLowerCase()}
-          class="py-2 px-4  text-gray-100 active:text-indigo-300 text-xl cursor-pointer z-20 border-b-2 border-white select-none {toggleActive(
-            currentPage,
-            item
-          )}"
+          class="relative py-2 px-4  text-gray-100 active:text-indigo-300 text-xl cursor-pointer z-20 select-none "
         >
           {item}
+          {#if item.toLowerCase() === currentPage}
+            <span
+              transition:scale={{ duration: 300, easing: quintOut }}
+              class="absolute bottom-0 left-0 block w-full pt-1 bg-white rounded-lg"
+            />
+          {/if}
         </li>
       {/each}
     </ul>
