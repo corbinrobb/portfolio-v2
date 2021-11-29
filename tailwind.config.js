@@ -19,8 +19,9 @@ module.exports = {
         "v-92": "92vh",
       },
       backgroundImage: {
-        project:
-          "url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')",
+        computer:
+          "url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80')",
+        food: "url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')",
       },
       keyframes: {
         "fade-in-down": {
@@ -70,6 +71,7 @@ module.exports = {
       ringWidth: ["active"],
       boxShadow: ["hover", "active"],
       opacity: ["disabled"],
+      scale: ["active"],
     },
   },
   purge: {

@@ -1,10 +1,18 @@
 <script lang="ts">
   import { fly } from "svelte/transition";
+  import ImageCarousel from "./ImageCarousel.svelte";
+  import Modal from "./Modal.svelte";
 
   export let title: string;
+  export let description: string;
+  export let images: string[];
   export let forward: boolean;
+  export let showDetails: boolean;
+  export let toggleDetails: () => void;
+
   let inX: number;
   let outX: number;
+
   const distance = 400;
 
   $: {
@@ -22,8 +30,9 @@
   <div
     in:fly={{ x: inX, duration: 500, delay: 500 }}
     out:fly={{ x: outX, duration: 500 }}
-    class="w-full min-w-full relative px-1 py-72 text-lg rounded shadow bg-project bg-center bg-cover flex flex-col items-center"
+    class="w-full min-w-full flex h-full relative rounded shadow"
   >
+    <ImageCarousel {images} />
     <div
       class="absolute left-2 top-12 text-4xl text-gray-200 backdrop-filter backdrop-blur-sm bg-gray-600 bg-opacity-20 rounded-md shadow-lg py-3 px-6"
     >
@@ -31,3 +40,10 @@
     </div>
   </div>
 {/key}
+
+<Modal display={showDetails} toggleDisplay={toggleDetails}>
+  <div class="p-6 border">
+    <div class="h-6"><h4>{title}</h4></div>
+    <div><p>{description}</p></div>
+  </div>
+</Modal>
