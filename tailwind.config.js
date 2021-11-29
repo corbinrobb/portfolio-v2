@@ -70,6 +70,7 @@ module.exports = {
       ringWidth: ["active"],
       boxShadow: ["hover", "active"],
       opacity: ["disabled"],
+      scale: ["active"],
     },
   },
   purge: {

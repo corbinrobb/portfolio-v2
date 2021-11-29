@@ -2,24 +2,35 @@
   import Main from "./components/Main.svelte";
   import Header from "./components/Header.svelte";
   import { darkModeStore } from "./stores";
+  import { beforeUpdate, onDestroy, afterUpdate, onMount, tick } from "svelte";
 
   let dark: boolean;
   let y = 0;
   let lastY = 0;
   let fixed = false;
+  let timeout;
 
   darkModeStore.subscribe((state) => {
     dark = state;
   });
 
   const updateY = (y: number) => {
+    if (y === 0) {
+      lastY = 0;
+      return;
+    }
     if (Math.abs(y - lastY) < 64) return;
     if (y >= lastY && fixed !== false) fixed = false;
     if (y < lastY && fixed !== true) fixed = true;
     lastY = y;
   };
 
-  $: updateY(y);
+  $: {
+    if (timeout && Math.abs(y - lastY) < 120 && y !== 0) {
+      clearTimeout(timeout);
+    }
+    timeout = setTimeout(() => updateY(y), 50);
+  }
 </script>
 
 <svelte:window bind:scrollY={y} />
