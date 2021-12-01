@@ -34,7 +34,7 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class:dark>
+<div class:dark class=" max-w-full">
   <div class="dark:bg-gray-700 dark:text-gray-50">
     <Header {fixed} />
     <Main />

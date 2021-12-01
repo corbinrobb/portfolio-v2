@@ -1,7 +1,7 @@
 <script lang="ts">
   import { pageStore } from "../stores";
   import About from "./About.svelte";
-  import Landing from "./Landing.svelte";
+  import Landing from "./Landing/Landing.svelte";
   import Showcase from "./Showcase.svelte";
   import Contact from "./Contact.svelte";
 

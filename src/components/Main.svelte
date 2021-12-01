@@ -7,6 +7,6 @@
   };
 </script>
 
-<main on:click={closeMenu} class="px-2 space-y-4 lg:w-2/3 lg:mx-auto">
+<main on:click={closeMenu} class="flex flex-col w-full">
   <Router />
 </main>
