@@ -8,7 +8,7 @@
 </script>
 
 <Page>
-  <div class="h-full py-20 lg:shadow-md flex justify-around items-center">
+  <div class=" py-72 flex justify-around items-center">
     <LinkIcon href="https://github.com/corbinrobb">
       <GithubIcon classes="h-8 w-8 cursor-pointer" />
     </LinkIcon>

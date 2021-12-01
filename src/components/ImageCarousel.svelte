@@ -24,10 +24,18 @@
 </script>
 
 {#key currentImage}
+  <!-- Change this from bg image to regular image -->
+  <!-- Also fix the modal width -->
   <div
     transition:fade={{ duration: 250 }}
-    class="relative h-full max-h-full w-full min-w-full text-lg px-1 py-72 bg-{currentImage} bg-center bg-cover"
-  />
+    class="relative h-full max-h-full min-w-full text-lg px-1"
+  >
+    <img
+      class="object-cover h-full w-full"
+      src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+      alt="Laptop computer"
+    />
+  </div>
 {/key}
 <div
   on:click={prev}

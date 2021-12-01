@@ -1,6 +1,6 @@
 <script lang="ts">
   import { tick } from "svelte";
-  import { projects } from "../projects";
+  import { projectStore } from "../stores";
   import Button from "./Button.svelte";
   import Project from "./Project.svelte";
   import Page from "./Page.svelte";
@@ -8,7 +8,10 @@
   let current = 0;
   let showDetails = false;
   let forward = false;
+  let projects;
   let project;
+
+  projectStore.subscribe((state) => (projects = state));
 
   const prev = async () => {
     forward = false;
@@ -33,12 +36,12 @@
 </script>
 
 <Page>
-  <div class="max-w-none flex space-x-3 overflow-hidden">
+  <div class="relative max-w-none h-3/4 flex overflow-hidden">
     {#key current}
       <Project {forward} {...project} {showDetails} {toggleDetails} />
     {/key}
   </div>
-  <div class="w-full px-4 py-3 flex absolute bottom-0 left-0">
+  <div class="w-full px-4 py-8 flex">
     <div class="w-1/3 flex justify-start">
       <Button disabled={current === 0} clickHandler={prev} value="prev" />
     </div>

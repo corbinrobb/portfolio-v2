@@ -2,7 +2,7 @@
   import { onDestroy } from "svelte";
   import { quintOut } from "svelte/easing";
 
-  import { fly, scale } from "svelte/transition";
+  import { fly, scale, fade } from "svelte/transition";
 
   import CodeIcon from "../icons/CodeIcon.svelte";
   import MenuIcon from "../icons/MenuIcon.svelte";
@@ -17,7 +17,6 @@
 
   let menuExpanded: boolean;
   let currentPage: string;
-  let setFixed: string;
 
   onDestroy(() => menuExpandedStore.set(false));
 
@@ -34,10 +33,11 @@
   };
 
   $: setFixed = fixed ? "fixed" : "absolute";
+  $: isHome = currentPage === "home";
 </script>
 
 <nav
-  class="z-40 flex justify-between px-3 py-2 items-center top-0 left-0 w-screen min-h-v-8 bg-gray-800 text-white {setFixed}"
+  class="z-40 flex justify-between px-3 py-2 items-center top-0 left-0 w-screen h-16 bg-gray-800 text-white {setFixed}"
   transition:fly={{ y: -64, duration: 500 }}
 >
   <span
@@ -48,7 +48,15 @@
     }}
   >
     <CodeIcon classes="h-8 w-8" />
-    <h2 class="text-2xl">Corbin Robb</h2>
+    {#key isHome}
+      <h2
+        in:fade={{ delay: 500 }}
+        out:fade
+        class="text-xl md:text-2xl {isHome ? 'hidden' : 'inline'}"
+      >
+        Corbin Robb
+      </h2>
+    {/key}
   </span>
 
   <div
