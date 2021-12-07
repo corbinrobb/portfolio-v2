@@ -1,6 +1,13 @@
 import { readable, writable } from "svelte/store";
+let dark: boolean;
+if (
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches
+) {
+  dark = true;
+}
 
-export const darkModeStore = writable(false);
+export const darkModeStore = writable(dark);
 
 export const menuExpandedStore = writable(false);
 
