@@ -7,6 +7,6 @@
   };
 </script>
 
-<main on:click={closeMenu} class="flex flex-col w-full">
+<main on:click={closeMenu} class="flex flex-col w-full snap-start">
   <Router />
 </main>

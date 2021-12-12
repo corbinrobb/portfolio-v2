@@ -46,10 +46,7 @@
       <Button disabled={current === 0} clickHandler={prev} value="prev" />
     </div>
     <div class="w-1/3 flex justify-center items-center">
-      <Button
-        clickHandler={toggleDetails}
-        value={!showDetails ? "Details" : "Close"}
-      />
+      <Button clickHandler={toggleDetails} value={"Details"} />
     </div>
     <div class="w-1/3 flex justify-end">
       <Button

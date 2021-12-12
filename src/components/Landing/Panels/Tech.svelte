@@ -1,13 +1,13 @@
 <script lang="ts">
-  import JavascriptIcon from "../../icons/JavascriptIcon.svelte";
-  import PosgresIcon from "../../icons/PosgresIcon.svelte";
-  import PythonIcon from "../../icons/PythonIcon.svelte";
-  import NodeJsIcon from "../../icons/NodeJsIcon.svelte";
-  import ReactIcon from "../../icons/ReactIcon.svelte";
-  import TypescriptIcon from "../../icons/TypescriptIcon.svelte";
-  import TailwindIcon from "../../icons/TailwindIcon.svelte";
-  import FastapiIcon from "../../icons/FastapiIcon.svelte";
-  import SvelteIcon from "../../icons/SvelteIcon.svelte";
+  import JavascriptIcon from "../../../icons/JavascriptIcon.svelte";
+  import PosgresIcon from "../../../icons/PosgresIcon.svelte";
+  import PythonIcon from "../../../icons/PythonIcon.svelte";
+  import NodeJsIcon from "../../../icons/NodeJsIcon.svelte";
+  import ReactIcon from "../../../icons/ReactIcon.svelte";
+  import TypescriptIcon from "../../../icons/TypescriptIcon.svelte";
+  import TailwindIcon from "../../../icons/TailwindIcon.svelte";
+  import FastapiIcon from "../../../icons/FastapiIcon.svelte";
+  import SvelteIcon from "../../../icons/SvelteIcon.svelte";
   const iconSize = "h-16 w-16";
   const gridItemClass = "flex items-center w-full text-lg space-x-3";
 </script>
