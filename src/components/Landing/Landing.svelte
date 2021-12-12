@@ -1,24 +1,22 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-
   import Footer from "../Footer.svelte";
-  import InfoCard from "./InfoCard.svelte";
+  import InfoCard from "./Panels/InfoCard.svelte";
   import Page from "../Page.svelte";
-  import SmallShowcase from "./SmallShowcase.svelte";
+  import SmallShowcase from "./Panels/SmallShowcase.svelte";
   import Welcome from "./Welcome.svelte";
-  let isTransitioning = true;
-  onMount(() => {
-    setTimeout(() => {
-      isTransitioning = false;
-    }, 4000);
-  });
+  import OutOfBox from "./Panels/OutOfBox.svelte";
+  import Detail from "./Panels/Detail.svelte";
+  import Creative from "./Panels/Creative.svelte";
+  import Teamwork from "./Panels/Teamwork.svelte";
 </script>
 
 <Page height="h-auto">
   <Welcome />
-  {#if !isTransitioning}
-    <InfoCard />
-    <SmallShowcase />
-  {/if}
+  <div class="snap-center"><OutOfBox /></div>
+  <div class="snap-center"><Detail /></div>
+  <div class="snap-center"><Creative /></div>
+  <div class="snap-center"><Teamwork /></div>
+  <div class="snap-start"><InfoCard /></div>
+  <div><SmallShowcase /></div>
 </Page>
 <Footer />
