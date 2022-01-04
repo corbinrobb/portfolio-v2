@@ -13,7 +13,7 @@
 </script>
 
 <div class="w-full md:w-2/3 mx-auto p-2 py-20 flex flex-col space-y-10">
-  <h3 class="text-2xl">What I Know</h3>
+  <h3 class="text-2xl">Tech Stack</h3>
   <ul
     class="w-full mx-auto grid grid-cols-2 gap-4 justify-items-center items-center"
   >

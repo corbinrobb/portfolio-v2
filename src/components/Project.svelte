@@ -5,7 +5,7 @@
 
   export let title: string;
   export let description: string;
-  export let images: string[];
+  export let images: { src: string; alt: string }[];
   export let forward: boolean;
   export let showDetails: boolean;
   export let toggleDetails: () => void;

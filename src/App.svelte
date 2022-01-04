@@ -34,8 +34,10 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class:dark class=" max-w-full">
-  <div class="dark:bg-gray-700 dark:text-gray-50">
+<div class:dark>
+  <div
+    class="dark:bg-gray-700 dark:text-gray-50 max-w-full h-screen snap-y overflow-scroll scroll-smooth"
+  >
     <Header {fixed} />
     <Main />
   </div>
@@ -46,6 +48,7 @@
   @tailwind components;
   @tailwind utilities;
   div {
+    /* Fixes weirdness with touch select hightlighting */
     -webkit-tap-highlight-color: transparent;
   }
 </style>

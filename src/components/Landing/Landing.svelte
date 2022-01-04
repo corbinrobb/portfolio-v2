@@ -12,11 +12,11 @@
 
 <Page height="h-auto">
   <Welcome />
-  <div class="snap-center"><OutOfBox /></div>
-  <div class="snap-center"><Detail /></div>
-  <div class="snap-center"><Creative /></div>
-  <div class="snap-center"><Teamwork /></div>
-  <div class="snap-start"><InfoCard /></div>
+  <!-- <div class="snap-center lg:snap-start lg:-scroll-mt-10"><OutOfBox /></div>
+  <div class="snap-center lg:snap-start lg:-scroll-mt-10"><Detail /></div>
+  <div class="snap-center lg:snap-start lg:-scroll-mt-10"><Creative /></div>
+  <div class="snap-center lg:snap-start lg:-scroll-mt-10"><Teamwork /></div> -->
+  <div class="snap-start lg:-scroll-mt-10"><InfoCard /></div>
   <div><SmallShowcase /></div>
 </Page>
 <Footer />
