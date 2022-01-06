@@ -43,8 +43,9 @@ export const projectStore = readable([
     ],
   },
   {
-    title: "Secret Family Recipes",
-    description: "Its a website for recipes!",
+    title: "Superset",
+    description:
+      "A data vizualization platform. I make frequent contributions to Superset and am an active member of Preset.io's community partners program",
     images: [
       {
         src: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",

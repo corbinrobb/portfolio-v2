@@ -79,11 +79,11 @@
     {:else}
       <div transition:fade={{ delay: 1200 }} class="w-full h-full">
         <div
-          class="w-full min-h-1/2 py-10 flex flex-col justify-around items-center text-3xl space-y-10"
+          class="w-full min-h-1/2 py-10 flex flex-col justify-around items-center space-y-10"
         >
-          <span>CORBIN</span>
-          <span>ROBB</span>
-          <span class=" text-xl">Developer</span>
+          <span class="text-3xl">CORBIN ROBB</span>
+          <span class=" text-xl">Full Stack Developer</span>
+          <span class=" text-xl">Denver CO</span>
         </div>
         <div class="flex h-1/2 justify-center items-end">
           <DoubleDown />

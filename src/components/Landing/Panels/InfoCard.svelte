@@ -4,5 +4,10 @@
 </script>
 
 <Panel>
+  <div>
+    <span>Passionate and resourceful</span>
+    <span>Driven and motivated</span>
+    <span>Strong attention to detail and great communication</span>
+  </div>
   <Tech />
 </Panel>
