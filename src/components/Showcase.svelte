@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { tick } from "svelte";
-  import { projectStore } from "../stores";
-  import Button from "./Button.svelte";
-  import Project from "./Project.svelte";
-  import Page from "./Page.svelte";
+  import { tick } from 'svelte';
+  import { projectStore } from '../stores';
+  import Button from './Button.svelte';
+  import Project from './Project.svelte';
+  import Page from './Page.svelte';
 
   let current = 0;
   let showDetails = false;
@@ -41,14 +41,14 @@
       <Project {forward} {...project} {showDetails} {toggleDetails} />
     {/key}
   </div>
-  <div class="w-full px-4 py-8 flex">
-    <div class="w-1/3 flex justify-start">
+  <div class="w-full px-4 py-8 lg:px-14 lg:py-16 flex lg:w-2/3 mx-auto">
+    <div class="w-1/3 lg:w-1/2  flex justify-start">
       <Button disabled={current === 0} clickHandler={prev} value="prev" />
     </div>
-    <div class="w-1/3 flex justify-center items-center">
-      <Button clickHandler={toggleDetails} value={"Details"} />
+    <div class="w-1/3 flex justify-center items-center lg:hidden">
+      <Button clickHandler={toggleDetails} value={'Details'} />
     </div>
-    <div class="w-1/3 flex justify-end">
+    <div class="w-1/3 lg:w-1/2 flex justify-end">
       <Button
         disabled={current === projects.length - 1}
         clickHandler={next}
