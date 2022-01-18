@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-  import { fade } from "svelte/transition";
+  import { onMount } from 'svelte';
+  import { fade } from 'svelte/transition';
 
-  export let height: string = "h-screen";
+  export let height: string = 'h-screen';
   let init: boolean = false;
 
   onMount(() => {
@@ -13,7 +13,7 @@
 {#if init}
   <div
     transition:fade={{ duration: 500, delay: 100 }}
-    class="relative min-h-screen {height} pt-20 sm:pt-24 lg:w-2/3 lg:mx-auto"
+    class="relative min-h-screen {height} pt-20 sm:pt-24 lg:w-full lg:mx-auto"
   >
     <slot />
   </div>
